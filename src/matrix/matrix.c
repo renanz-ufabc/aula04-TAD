@@ -36,9 +36,9 @@ void matrix_destroy(Matrix * matrix)
 double matrix_get(const Matrix * matrix, size_t row, size_t col)
 {
     if (row < 0) { row = 0; }
-    if (row > matrix->rows) { row = matrix->rows; }
+    if (row > matrix->rows - 1) { row = matrix->rows - 1; }
     if (col < 0) { col = 0; }
-    if (col > matrix->cols) { col = matrix->cols; }
+    if (col > matrix->cols - 1) { col = matrix->cols - 1; }
 
     return matrix->data[row][col];
 }
@@ -53,9 +53,9 @@ size_t matrix_cols(const Matrix * matrix)
 void matrix_set(Matrix * matrix, size_t row, size_t col, double value)
 {
     if (row < 0) { row = 0; }
-    if (row > matrix->rows) { row = matrix->rows; }
+    if (row > matrix->rows - 1) { row = matrix->rows - 1; }
     if (col < 0) { col = 0; }
-    if (col > matrix->cols) { col = matrix->cols; }
+    if (col > matrix->cols - 1) { col = matrix->cols - 1; }
     
     matrix->data[row][col] = value;
 }

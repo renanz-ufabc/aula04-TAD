@@ -1,5 +1,5 @@
-#ifndef MATRIX_H
-#define MATRIX_H
+#ifndef DYNAMIC_ARRAY_H
+#define DYNAMIC_ARRAY_H
 #include <stdlib.h>
 
 
@@ -16,6 +16,7 @@ void dynamicArray_set(DynamicArray * dynamicArray, size_t index, int value);
 
 void dynamicArray_print(const DynamicArray * dynamicArray);
 void dynamicArray_add(DynamicArray * dynamicArray, int value);
+void dynamicArray_remove(DynamicArray * dynamicArray, size_t index);
 
 
 #endif
